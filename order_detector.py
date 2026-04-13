@@ -1,5 +1,5 @@
 """
-Order Detector — Ollama-based HTML parser for Binance P2P orders.
+Order Detector — Ollama-based HTML parser for exchange P2P orders.
 """
 
 import json
@@ -21,7 +21,7 @@ class OrderDetector:
     def extract_orders(self, html: str) -> list[dict]:
         html_truncated = html[:50000]
         user_prompt = (
-            "Analyze this Binance P2P order page HTML.\n\n"
+            "Analyze this exchange P2P order page HTML.\n\n"
             f"HTML content:\n{html_truncated}\n\n"
             "Return JSON only."
         )

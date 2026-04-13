@@ -1,5 +1,5 @@
 """
-Binance P2P Monitor Agent
+exchange P2P Monitor Agent
 Uso: source venv/bin/activate && python main.py
 Requiere Chrome: /opt/google/chrome/chrome --remote-debugging-port=9222 --user-data-dir=$HOME/.config/chrome-bot &
 """
@@ -40,7 +40,7 @@ def _fmt_new_order(order: dict) -> str:
         f"⏰ <b>Tiempo:</b> {order.get('time_remaining', '—')}\n"
         f"📌 <b>Estado:</b> {order['status']}\n"
         f"━━━━━━━━━━━━━━━━━━\n"
-        f"🔗 <a href='{ORDERS_URL}'>Ver en Binance</a>"
+        f"🔗 <a href='{ORDERS_URL}'>Ver en exchange</a>"
     )
 
 
@@ -113,7 +113,7 @@ class P2PMonitor:
 
 async def main():
     print("=" * 50)
-    print("  Binance P2P Monitor Agent — Starting")
+    print("  exchange P2P Monitor Agent — Starting")
     print("=" * 50)
 
     monitor = P2PMonitor()

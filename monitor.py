@@ -1,5 +1,5 @@
 """
-Monitor — polls Binance P2P orders page, tracks new orders and status changes.
+Monitor — polls exchange P2P orders page, tracks new orders and status changes.
 """
 
 import asyncio
