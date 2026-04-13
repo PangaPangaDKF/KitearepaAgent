@@ -35,7 +35,7 @@ class TelegramController:
         if self.monitor.is_monitoring:
             await update.message.reply_text("🔄 Ya estoy monitoreando.")
             return
-        await update.message.reply_text("🔍 Verificando anuncio activo en Binance…")
+        await update.message.reply_text("🔍 Verificando anuncio activo en exchange…")
         has_ad = await self.monitor.check_active_ad()
         if has_ad:
             self.monitor.is_monitoring = True
@@ -48,7 +48,7 @@ class TelegramController:
         else:
             await update.message.reply_text(
                 "❌ <b>No hay anuncio activo</b>\n\n"
-                "1. Ve a Binance P2P → Mis anuncios\n"
+                "1. Ve a P2P exchange → Mis anuncios\n"
                 "2. Publica un anuncio de VENTA de USDT\n"
                 "3. Asegúrate que esté <b>En línea</b>\n"
                 "4. Envía /iniciar nuevamente.",
@@ -115,6 +115,6 @@ class TelegramController:
             "/ordenes — lista órdenes conocidas\n"
             "/ayuda   — esta ayuda\n"
             "━━━━━━━━━━━━━━\n"
-            "<i>Solo monitorea si hay anuncio activo en Binance.</i>",
+            "<i>Solo monitorea si hay anuncio activo en exchange.</i>",
             parse_mode="HTML",
         )
