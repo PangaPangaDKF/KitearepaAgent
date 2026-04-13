@@ -1,0 +1,17 @@
+# Browser automation
+playwright==1.48.0
+playwright-stealth==1.0.6
+
+# AI y LLM
+ollama==0.1.6
+
+# Autenticación y seguridad
+pyotp==2.9.0
+cryptography==42.0.5
+
+# Notificaciones
+python-telegram-bot==20.7
+
+# Utilities
+python-dotenv==1.0.0
+aiofiles==23.2.1
